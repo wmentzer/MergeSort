@@ -33,7 +33,6 @@ void msort(int  a[], int x[], int s, int e) {
 			i++;
 			k++;
 		} else if (x[j] < x[i] && k <= e) {
-//			cout << a[j] << " " << endl;
 
 			a[k] = x[j];
 			j++;
@@ -75,22 +74,15 @@ bool sorted(int a[], int size) {
 }
 
 int main(int argc, char * args[]) {
-	/* int a[1000];
+	 int a[1000];
 	for (int i = 0; i < 1000; ++i) a[i] = -50 + rand() % 100;
-	mergesort(a, 1000);
-	assert(sorted(a, 1000));
-	*/
+	mergesort(a,1000);
+	assert(sorted(a,1000));
 
-	int a[10];
-	for (int i = 0; i < 10; ++i) a[i] = -50 + rand() % 100;
+	int s[10];
+	for (int i = 0; i < 10; ++i) s[i] = -50 + rand() % 100;
+	mergesort(s,10);
+	assert(sorted(s,10));
 
-	for(int i = 0; i < 10; i++) cout << a[i] << endl;
-	cout << endl;
-
-	mergesort(a,10);
-
-	cout << endl;
-
-	for(int i = 0; i < 10; i++) cout << a[i] << endl;
-	cout << endl;
+	cout << "All tests passed." << endl;
 }
